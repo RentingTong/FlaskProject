@@ -1,4 +1,5 @@
 {
   "api_key": "58e3e5eb28b05bcc2da8b43ab49b576f",
-  "basic_url": "api.openweathermap.org/data/2.5/weather?"
+  "basic_url": "api.openweathermap.org/data/2.5/weather?",
+  "city": "Shanghai"
 }

@@ -16,9 +16,9 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def weather():
-    city = request.form["city"] if request == "POST" else "Shanghai"
     meta_data = get_meta_data()
     api_key, basic_url = meta_data['api_key'], meta_data['basic_url']
+    city = request.form["city"] if request == "POST" else meta_data['city']
 
     source = urllib.request.urlopen(f"{basic_url}q={city}&appid={api_key}").read()
 
