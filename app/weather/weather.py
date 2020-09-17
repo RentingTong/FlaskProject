@@ -8,6 +8,7 @@
 A weather widget.
 """
 from flask import Flask, render_template, request
+import os
 import json
 import urllib.request
 
@@ -27,7 +28,8 @@ def weather():
 
 
 def get_meta_data():
-    with open('meta.json') as f:
+    meta_file_path = os.path.join(os.path.dirname(__file__), "meta.json")
+    with open(meta_file_path) as f:
         meta_data = json.load(f)
     return meta_data
 
