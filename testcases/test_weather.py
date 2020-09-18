@@ -21,7 +21,11 @@ class TestWeather(unittest.TestCase):
         request = self.app.get('/')
         self.assertEqual(request.status_code, 200)
 
-    def test_002_invaild_route_returns_404_page(self):
+    def test_002_default_route_post_returns_success(self):
+        request = self.app.post('/')
+        self.assertEqual(request.status_code, 200)
+
+    def test_003_invaild_route_returns_404_page(self):
         request = self.app.get('/doesnotexist')
         self.assertEqual(request.status_code, 404)
 

@@ -7,7 +7,7 @@
 @description:
 A weather widget.
 """
-from flask import Flask, render_template, request
+from flask import Flask, request, session, render_template
 import os
 import json
 import ssl
@@ -26,7 +26,20 @@ def weather():
     source = urllib.request.urlopen(url=f"{basic_url}q={city}&appid={api_key}", context=context).read()
 
     data = get_target_data(json.loads(source))
-    return render_template('index.html', data=data)
+    return render_template('weather.html', data=data)
+
+
+# @app.route("/<city>", methods=["GET", "POST"])
+# def specified_weather(city):
+#     meta_data = get_meta_data()['weather']
+#     api_key, basic_url = meta_data['api_key'], meta_data['basic_url']
+#     # city = request.form["city"] if request == "POST" else meta_data['city']
+#
+#     context = ssl._create_unverified_context()
+#     source = urllib.request.urlopen(url=f"{basic_url}q={city}&appid={api_key}", context=context).read()
+#
+#     data = get_target_data(json.loads(source))
+#     return render_template('weather.html', data=data)
 
 
 def get_meta_data():
