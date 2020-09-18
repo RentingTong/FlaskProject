@@ -5,10 +5,10 @@
 @author: Tara
 
 @description:
-Unit test for weather application.
+Unit test for weather app.
 """
 import unittest
-import application.weather as w
+import app.weather as w
 
 
 class TestWeather(unittest.TestCase):

@@ -83,7 +83,7 @@ def page_not_found(error):
 
 
 if __name__ == "__main__":
-    # application.run(debug=True)
+    # app.run(debug=True)
     # api_key = json.loads("meta.json")
     # print(api_key)
     print(get_meta_data())
