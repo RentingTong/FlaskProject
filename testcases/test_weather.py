@@ -5,10 +5,10 @@
 @author: Tara
 
 @description:
-Unit test for weather app.
+Unit test for weather application.
 """
 import unittest
-import app.weather.weather as w
+import application.weather as w
 
 
 class TestWeather(unittest.TestCase):
@@ -19,7 +19,7 @@ class TestWeather(unittest.TestCase):
 
     def test_001_default_route_returns_success(self):
         request = self.app.get('/')
-        self.assertEqual(request.status_code, 302)
+        self.assertEqual(request.status_code, 200)
 
     def test_002_invaild_route_returns_404_page(self):
         request = self.app.get('/doesnotexist')
