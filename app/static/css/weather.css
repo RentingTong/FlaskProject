@@ -1,0 +1,26 @@
+.row {
+    background: #337ab7;
+    color: white;
+    font-family: 'Times New Roman', Impact, Charcoal, sans-serif;
+    }
+h3 {
+    background-color: lightblue;
+    color: navy;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-weight: bold;
+    }
+body, html {
+    height: 100%;
+    }
+.bg-img {
+  background-image: url('../img/Two_Jack_Lake_AB_Canada.jpg');
+  height: 100%;
+  width: 100%;
+  min-height: 800px;
+  min-width: 760px;
+  left: 0px;
+  top: 0px;
+  background-position: center;
+  background-size: cover;
+  background-color: #cccccc;
+}

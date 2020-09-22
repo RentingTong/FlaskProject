@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <title>weather</title>
     <!-- Latest complied and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!--link rel="stylesheet" type="text/css" href="../static/css/weather.css"-->
+<!--    <link rel="stylesheet" type="text/css" href="/home/mystic/code/FlaskProject/app/static/css/weather.css">-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/weather.css') }}">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -15,49 +18,63 @@
 
 </head>
 
-<style>
+<!--style>
     h1 {font-family: "Times New Roman", Impact, Charcoal, sans-serif}
     body, h3 {font-family: "Comic Sans MS", cursive, sans-serif}
     body, html {height: 100%}
-    .bgimg {
-      background-image: url('Two_Jack_Lake_AB_Canada.jpg');
-      min-height: 100%
+    .bg-img {
+      background-image: url('static/img/Two_Jack_Lake_AB_Canada.jpg');
+      height: 100%;
+      width: 100%;
+      min-height: 800px;
+      min-width: 760px;
+      left: 0px;
+      top: 0px;
       background-position: center;
-      background-size: cover;
+      background-size: 100% auto;
     }
-</style>
+</style-->
 
 <body>
-    <nav class="row" style="background: #337ab7; color: white;">
-        <h1 class="col-md-3 text-center">weather</h1>
-    </nav>
-    <br />
-    <br />
-    <center class="row">
-        <form method="post" class="col-md-6 col-md-offset-3">
-            <div class="input-group">
-                <input type="text" class="form-control" name="city" placeholder="Search">
-                <div class="input-group-btn">
-                    <button class="btn btn-primary" type="submit">
-                        <i class="glyphicon glyphicon-search"></i>
-                    </button>
+    <!--img class="bgimg" src="static/img/Two_Jack_Lake_AB_Canada.jpg"-->
+    <!--div class="bg-img"-->
+<!--        <nav class="row" style="background: #337ab7; color: white; font-family: 'Times New Roman', Impact, Charcoal, sans-serif;">-->
+<!--        <nav class="title-container">-->
+        <nav class="row">
+            <h1 class="col-md-3 text-center">WEATHER</h1>
+        </nav>
+        <br />
+        <br />
+        <br />
+        <center class="search-container">
+            <form method="post" class="col-md-6 col-md-offset-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="city" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
                 </div>
+            </form>
+        </center>
+        <br />
+        <br />
+        <br />
+        <div class="temp-container">
+            {% if data.country_code and data.coordinate and data.weather and data.temp and data.pressure and data.humidity %}
+            <div class="col-md-6 col-md-offset-3">
+                <h3>Country Code: {{data.country_code}}</h3>
+                <h3>City Name: {{data.cityname}}</h3>
+                <h3>Coordinate : {{data.coordinate}}</h3>
+                <h3>Weather: {{data.weather}}</h3>
+                <h3>Temperature (in Kelvin) : {{data.temp}}</h3>
+                <h3>Temperature (in Celsius) : {{data.temp_cel}}</h3>
+                <h3>Pressure : {{data.pressure}} </h3>
+                <h3>Humidity : {{data.humidity}}</h3>
             </div>
-        </form>
-    </center>
-    <div class="row">
-        {% if data.country_code and data.coordinate and data.weather and data.temp and data.pressure and data.humidity %}
-        <div class="col-md-6 col-md-offset-3">
-            <h3>Country Code: {{data.country_code}}</h3>
-            <h3>City Name: {{data.cityname}}</h3>
-            <h3>Coordinate : {{data.coordinate}}</h3>
-            <h3>Weather: {{data.weather}}</h3>
-            <h3>Temperature (in Kelvin) : {{data.temp}}</h3>
-            <h3>Temperature (in Celsius) : {{data.temp_cel}}</h3>
-            <h3>Pressure : {{data.pressure}} </h3>
-            <h3>Humidity : {{data.humidity}}</h3>
+            {% endif %}
         </div>
-        {% endif %}
-    </div>
+    <!--/div-->
 </body>
 </html>
