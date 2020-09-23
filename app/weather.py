@@ -20,7 +20,7 @@ app = Flask(__name__, static_url_path="/static", static_folder="static")
 def weather():
     meta_data = get_meta_data()['weather']
     api_key, basic_url = meta_data['api_key'], meta_data['basic_url']
-    city = request.form["city"] if request == "POST" else meta_data['city']
+    city = request.form['city'] if request.method == "POST" else meta_data['city']
 
     context = ssl._create_unverified_context()
     source = urllib.request.urlopen(url=f"{basic_url}q={city}&appid={api_key}", context=context).read()
@@ -29,17 +29,28 @@ def weather():
     return render_template('weather.html', data=data)
 
 
-@app.route("/<city>", methods=["GET", "POST"])
-def specified_weather(city):
-    meta_data = get_meta_data()['weather']
-    api_key, basic_url = meta_data['api_key'], meta_data['basic_url']
-    city = city if request == "POST" else meta_data['city']
+# @app.route("/get_city", methods=["GET", "POST"])
+# def get_input():
+#     if request.method == "POST":
+#         city = request.form['city']
+#         # for k, v in request.form.items():
+#         # print(f"{k} : {v}")
+#         return city
 
-    context = ssl._create_unverified_context()
-    source = urllib.request.urlopen(url=f"{basic_url}q={city}&appid={api_key}", context=context).read()
 
-    data = get_target_data(json.loads(source))
-    return render_template('weather.html', data=data)
+
+
+# @app.route("/<city>", methods=["GET", "POST"])
+# def specified_weather(city):
+#     meta_data = get_meta_data()['weather']
+#     api_key, basic_url = meta_data['api_key'], meta_data['basic_url']
+#     city = city if request == "POST" else meta_data['city']
+#
+#     context = ssl._create_unverified_context()
+#     source = urllib.request.urlopen(url=f"{basic_url}q={city}&appid={api_key}", context=context).read()
+#
+#     data = get_target_data(json.loads(source))
+#     return render_template('weather.html', data=data)
 
 
 def get_meta_data():
@@ -83,8 +94,8 @@ def page_not_found(error):
 
 
 if __name__ == "__main__":
-    # app.run(debug=True)
+    app.run(debug=True)
     # api_key = json.loads("meta.json")
     # print(api_key)
-    print(get_meta_data())
+    # print(get_meta_data())
 

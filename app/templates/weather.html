@@ -37,9 +37,8 @@
 
 <body>
     <!--img class="bgimg" src="static/img/Two_Jack_Lake_AB_Canada.jpg"-->
-    <!--div class="bg-img"-->
+    <div class="bg-img">
 <!--        <nav class="row" style="background: #337ab7; color: white; font-family: 'Times New Roman', Impact, Charcoal, sans-serif;">-->
-<!--        <nav class="title-container">-->
         <nav class="row">
             <h1 class="col-md-3 text-center">WEATHER</h1>
         </nav>
@@ -47,7 +46,7 @@
         <br />
         <br />
         <center class="search-container">
-            <form method="post" class="col-md-6 col-md-offset-3">
+            <form method="post" class="col-md-6 col-md-offset-3" action="/get_city">
                 <div class="input-group">
                     <input type="text" class="form-control" name="city" placeholder="Search">
                     <div class="input-group-btn">
@@ -75,6 +74,6 @@
             </div>
             {% endif %}
         </div>
-    <!--/div-->
+    </div>
 </body>
 </html>
