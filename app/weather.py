@@ -37,9 +37,6 @@ def weather():
 #         # print(f"{k} : {v}")
 #         return city
 
-
-
-
 # @app.route("/<city>", methods=["GET", "POST"])
 # def specified_weather(city):
 #     meta_data = get_meta_data()['weather']
