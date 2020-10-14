@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="71bc6298-05f2-4654-87cf-696970a54cfb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/img/Two_Jack_Lake_AB_Canada.jpg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iEExe68ozwxGBRv5GGDSGqzOkB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unittests for test_weather.TestWeather.test_002_default_route_post_returns_success" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="FlaskProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_weather.TestWeather.test_002_default_route_post_returns_success&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests for test_weather.TestWeather.test_002_default_route_post_returns_success" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="71bc6298-05f2-4654-87cf-696970a54cfb" name="Default Changelist" comment="" />
+      <created>1601464598998</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601464598998</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1259" height="182" key="GridCell.Tab.0.bottom" timestamp="1601560263843">
+      <screen x="0" y="23" width="1280" height="731" />
+    </state>
+    <state width="1259" height="182" key="GridCell.Tab.0.bottom/0.23.1280.731@0.23.1280.731" timestamp="1601560263843" />
+    <state width="1259" height="182" key="GridCell.Tab.0.center" timestamp="1601560263843">
+      <screen x="0" y="23" width="1280" height="731" />
+    </state>
+    <state width="1259" height="182" key="GridCell.Tab.0.center/0.23.1280.731@0.23.1280.731" timestamp="1601560263843" />
+    <state width="1259" height="182" key="GridCell.Tab.0.left" timestamp="1601560263842">
+      <screen x="0" y="23" width="1280" height="731" />
+    </state>
+    <state width="1259" height="182" key="GridCell.Tab.0.left/0.23.1280.731@0.23.1280.731" timestamp="1601560263842" />
+    <state width="1259" height="182" key="GridCell.Tab.0.right" timestamp="1601560263843">
+      <screen x="0" y="23" width="1280" height="731" />
+    </state>
+    <state width="1259" height="182" key="GridCell.Tab.0.right/0.23.1280.731@0.23.1280.731" timestamp="1601560263843" />
+    <state x="283" y="32" key="SettingsEditor" timestamp="1601564208640">
+      <screen x="0" y="23" width="1280" height="731" />
+    </state>
+    <state x="283" y="32" key="SettingsEditor/0.23.1280.731@0.23.1280.731" timestamp="1601564208640" />
+    <state x="342" y="143" width="598" height="490" key="find.popup" timestamp="1602676212260">
+      <screen x="0" y="23" width="1280" height="731" />
+    </state>
+    <state x="342" y="143" width="598" height="490" key="find.popup/0.23.1280.731@0.23.1280.731" timestamp="1602676212260" />
+    <state x="306" y="78" width="670" height="676" key="search.everywhere.popup" timestamp="1602662182002">
+      <screen x="0" y="23" width="1280" height="731" />
+    </state>
+    <state x="306" y="78" width="670" height="676" key="search.everywhere.popup/0.23.1280.731@0.23.1280.731" timestamp="1602662182002" />
+  </component>
+</project>
