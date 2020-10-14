@@ -23,7 +23,7 @@ def weather():
     city = request.form['city'] if request.method == "POST" else meta_data['city']
 
     context = ssl._create_unverified_context()
-    source = urllib.request.urlopen(url=f"{basic_url}q={city}&appid={api_key}", context=context).read()
+    source = urllib.request.urlopen(url=f"{basic_url}q={city}&appid={api_key}&units=metric", context=context).read()
 
     data = get_target_data(json.loads(source))
     return render_template('weather.html', data=data)
@@ -72,11 +72,13 @@ def get_target_data(data_dict):
     '''
     data = {
         "country_code": str(data_dict['sys']['country']),
+        "city": str(data_dict['name']),
         "coordinate": str(data_dict['coord']['lon']) + ' ' +
                       str(data_dict['coord']['lat']),
         "weather": str(data_dict['weather'][0]['main']) + ' - ' +
                    str(data_dict['weather'][0]['description']),
-        "temp": str(data_dict['main']['temp']) + 'k',
+        "temp": str(data_dict['main']['temp']) + "°C",
+        "temp_f": "{:.2f}".format(data_dict['main']['temp']*9/5 + 32) + "°F",
         "pressure": str(data_dict['main']['pressure']),
         "humidity": str(data_dict['main']['humidity']),
     }

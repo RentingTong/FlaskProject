@@ -64,11 +64,11 @@
             {% if data.country_code and data.coordinate and data.weather and data.temp and data.pressure and data.humidity %}
             <div class="col-md-6 col-md-offset-3">
                 <h3>Country Code: {{data.country_code}}</h3>
-                <h3>City Name: {{data.cityname}}</h3>
+                <h3>City Name: {{data.city}}</h3>
                 <h3>Coordinate : {{data.coordinate}}</h3>
                 <h3>Weather: {{data.weather}}</h3>
-                <h3>Temperature (in Kelvin) : {{data.temp}}</h3>
-                <h3>Temperature (in Celsius) : {{data.temp_cel}}</h3>
+                <h3>Temperature (in Celsius) : {{data.temp}}</h3>
+                <h3>Temperature (in Fahrenheit) : {{data.temp_f}}</h3>
                 <h3>Pressure : {{data.pressure}} </h3>
                 <h3>Humidity : {{data.humidity}}</h3>
             </div>
