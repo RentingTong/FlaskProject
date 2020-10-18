@@ -94,7 +94,12 @@ def page_not_found(error):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
     # api_key = json.loads("meta.json")
     # print(api_key)
     # print(get_meta_data())
 
+    # import os
+    # pictures_list = [f for f in os.listdir("/Users/tong/Documents/code/FlaskProject/app/static/img/")]
+    # print(pictures_list)
+    # print(len(pictures_list))

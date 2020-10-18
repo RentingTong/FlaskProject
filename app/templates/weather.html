@@ -10,6 +10,12 @@
 <!--    <link rel="stylesheet" type="text/css" href="/home/mystic/code/FlaskProject/app/static/css/weather.css">-->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/weather.css') }}">
 
+    <!--NEED TEST-->
+    <script type="text/javascript">
+    var images = ['St Aldhelms Chapel – Summer Moon.jpg', 'Summer Afternoon – Hambledon Hill.jpg', 'Three Dalmations at Tarrant Crawford.jpg', 'West Bay.jpg', 'Winter Morning – Flooded Fields.jpg', 'Snowstorm – Pimperne.jpg', 'Durdle Door.jpg', 'Tennis in the Garden with the Gathering Rooks.jpg', 'On the Dorset Cliff Path.jpg', 'Hazy Summer Afternoon on the River Stour.jpg', '__init__.py', 'Across the River by Whitemill Bridge.jpg', 'By the Gate on Ballard Down.jpg', 'A Field of Poppies.jpg', 'Dawn Across the Valley.jpg', 'Hambledon Hill.jpg', 'Summer Evening near Melbury Beacon.jpg', 'Surprising the Pheasant.jpg', 'A Walk in May.jpg', 'Fox in the Cold Dawn.jpg', 'Misty May Morning.jpg', 'Winter Morning.jpg', 'Purbeck Walk, Towards the Isle of Wight.jpg', 'Startled Horse by a Field of Poppies.jpg', 'Chalkland – On the Path to Win Green.jpg', 'A Gentle Breeze – St Aldhelms.jpg', 'Towards the Ox Drove – Win Green.jpg'];
+    $('#background').css({'background-image': 'url(images/' + images[Math.floor(Math.random() * images.length)] + ')'});
+    </script>
+
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
